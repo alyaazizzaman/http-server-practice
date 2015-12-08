@@ -4,7 +4,10 @@ var http = require('http');
 //create and http server, and every time it receives a request
 //it invokes the callback funciton
 var server = http.createServer(function(req, res){
-  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Type', 'application/json');
+  //write out a response
+  res.write('{"message":"hello internet"}');
+  //end response
   res.end('Hello Internet');
 });
 
